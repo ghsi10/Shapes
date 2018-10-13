@@ -6,11 +6,11 @@ public abstract class Polygon extends Shape {
     protected Point[] points;
 
     public Polygon(Point[] points) {
-        this.points = points.clone();
+        this.points = points;
     }
 
     public Point[] getPoints() {
-        return points.clone();
+        return points;
     }
 
     public List<Double> getSides() {

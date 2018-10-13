@@ -1,7 +1,7 @@
 public class Triangle extends Polygon {
 
     public Triangle(Point p1, Point p2, Point p3) {
-        super(new Point[]{new Point(p1), new Point(p2), new Point(p3)});
+        super(new Point[]{p1, p2, p3});
     }
 
     @Override

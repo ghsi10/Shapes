@@ -45,7 +45,7 @@ public class ShapesFrame extends Frame {
     }
 
     private Color getKnownColor() {
-        switch ((int) (Math.random() * 13)) {
+        switch ((int) (Math.random() * 12)) {
             case 0:
                 return Color.YELLOW;
             case 1:
@@ -68,8 +68,6 @@ public class ShapesFrame extends Frame {
                 return Color.PINK;
             case 10:
                 return Color.RED;
-            case 11:
-                return Color.WHITE;
             default:
                 return Color.BLACK;
         }

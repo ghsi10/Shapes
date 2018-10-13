@@ -11,15 +11,15 @@ public class TriangleTest {
 
     @Before
     public void setup() {
-        triangle = new Triangle(new Point(0, 3), new Point(4, 0), new Point(4, 3));
+        triangle = new Triangle(Point.of(0, 3), Point.of(4, 0), Point.of(4, 3));
     }
 
     @Test
     public void getPoints() {
         Point[] points = triangle.getPoints();
-        assertEquals(points[0], new Point(0, 3));
-        assertEquals(points[1], new Point(4, 0));
-        assertEquals(points[2], new Point(4, 3));
+        assertEquals(points[0], Point.of(0, 3));
+        assertEquals(points[1], Point.of(4, 0));
+        assertEquals(points[2], Point.of(4, 3));
     }
 
     @Test
@@ -43,10 +43,10 @@ public class TriangleTest {
 
     @Test
     public void move() {
-        triangle.move(new Point(1, 2));
+        triangle.move(Point.of(1, 2));
         Point[] p = triangle.getPoints();
-        assertEquals(p[0], new Point(1, 5));
-        assertEquals(p[1], new Point(5, 2));
-        assertEquals(p[2], new Point(5, 5));
+        assertEquals(p[0], Point.of(1, 5));
+        assertEquals(p[1], Point.of(5, 2));
+        assertEquals(p[2], Point.of(5, 5));
     }
 }

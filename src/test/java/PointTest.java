@@ -9,12 +9,12 @@ public class PointTest {
 
     @Before
     public void setup() {
-        point = new Point(5, 8);
+        point = Point.of(5, 8);
     }
 
     @Test
     public void copyConstrictor() {
-        Point p = new Point(point);
+        Point p = Point.of(point);
         assertEquals(p.getX(), 5);
         assertEquals(p.getY(), 8);
     }
@@ -28,19 +28,19 @@ public class PointTest {
 
     @Test
     public void moveByPoint() {
-        point.move(new Point(3, 2));
+        point.move(Point.of(3, 2));
         assertEquals(point.getX(), 8);
         assertEquals(point.getY(), 10);
     }
 
     @Test
     public void distance() {
-        assertEquals(point.distance(new Point(5, 10)), 2.0, 0.001);
+        assertEquals(point.distance(Point.of(5, 10)), 2.0, 0.001);
     }
 
     @Test
     public void notEquals() {
-        Point p = new Point(1, 2);
+        Point p = Point.of(1, 2);
         assertNotEquals(point, p);
     }
 
@@ -56,7 +56,7 @@ public class PointTest {
 
     @Test
     public void equals() {
-        Point p = new Point(5, 8);
+        Point p = Point.of(5, 8);
         assertEquals(point, p);
     }
 }
