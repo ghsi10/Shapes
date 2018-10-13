@@ -24,4 +24,8 @@ public abstract class Polygon extends Shape {
         for (Point point : points)
             point.move(p);
     }
+
+    public double getPerimeter() {
+        return getSides().stream().reduce(0.0, (a, b) -> a + b);
+    }
 }

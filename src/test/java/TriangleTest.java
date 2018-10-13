@@ -3,8 +3,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TriangleTest {
 
@@ -12,11 +11,7 @@ public class TriangleTest {
 
     @Before
     public void setup() {
-        Point[] points = new Point[3];
-        points[0] = new Point(0, 3);
-        points[1] = new Point(4, 0);
-        points[2] = new Point(4, 3);
-        triangle = new Triangle(points);
+        triangle = new Triangle(new Point(0, 3), new Point(4, 0), new Point(4, 3));
     }
 
     @Test
