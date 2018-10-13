@@ -11,11 +11,11 @@ public class Triangle extends Polygon {
 
     @Override
     public double getArea() {
-        return 0;
-    }
-
-    @Override
-    public void move(Point p) {
-
+        double perimeter = getPerimeter();
+        double ans = perimeter / 2;
+        for (int i = 0; i < getSides().size(); i++) {
+            ans *= (perimeter / 2 - getSides().get(i));
+        }
+        return Math.sqrt(ans);
     }
 }
